@@ -31,6 +31,7 @@ test('button clicks increment count and rollover at point caps', () => {
     fireEvent.click(getByTestId('foul-button'))
     expect(getByTestId('strike-count').textContent).toBe('2')
     //hit button reset all
+    fireEvent.click(getByTestId('ball-button'))
     fireEvent.click(getByTestId('hit-button'))
     expect(getByTestId('strike-count').textContent).toBe('0')
     expect(getByTestId('ball-count').textContent).toBe('0')
