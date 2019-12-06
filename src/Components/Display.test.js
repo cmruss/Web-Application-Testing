@@ -5,7 +5,7 @@ import Display from './Display';
 it('Display component renders', () => {
   const component = render(<Display/>);
   console.log(component.getByAltText);
-})
+});
 
 test('button clicks increment count and rollover at point caps', () => {
     const { getByTestId } = render(<Display/>)
@@ -34,4 +34,4 @@ test('button clicks increment count and rollover at point caps', () => {
     fireEvent.click(getByTestId('hit-button'))
     expect(getByTestId('strike-count').textContent).toBe('0')
     expect(getByTestId('ball-count').textContent).toBe('0')
-})
+});
